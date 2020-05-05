@@ -25,3 +25,17 @@ class Validation:
             self.List_Of_Users.append([FirstName, LastName, UserName, Domain, Email])  #Appending entery data to an existing list
             print("Do you want to add another user ? yes/no ")  #Yes;enables the while loop to add more User Login info , No;breaks the Condition of loop
             Condition=input()
+
+    def Redirection(self):
+          #This Method checks the validity of user and domains which user belong to it.
+             #checking data proccess comes from the list of
+               #user name as a input TBC
+                 #user doesn't exist TBC
+         print("Please give the username to check its Domain(username is Case Sensitive):")
+         UsernameInput=input()
+         for i in range(len(self.List_Of_Users)):
+             if self.List_Of_Users[i][2]==UsernameInput:
+                 #takes the 3rd value of matrix "List_Of_Users" compares with 4th value which is domain of user
+                   #prints all Domains which reserved for the user
+                 print(self.List_Of_Users[i][3])
+
